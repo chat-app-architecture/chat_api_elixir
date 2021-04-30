@@ -1,4 +1,4 @@
-defmodule ChatApi.Authentication.Users do
+defmodule ChatApi.Authentication do
   @moduledoc """
   The boundry for the Users and UserResources system
   """
