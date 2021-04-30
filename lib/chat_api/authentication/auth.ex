@@ -14,7 +14,7 @@ defmodule ChatApi.Authentication.Auth do
 
     case check_password(user, password) do
       true -> {:ok, user}
-      _ -> {:error, "Could not login"}
+      _ -> {:error, "Could not sign_in"}
     end
   end
 
