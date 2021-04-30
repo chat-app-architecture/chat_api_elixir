@@ -6,7 +6,7 @@ defmodule ChatApiWeb.UserController do
 
   action_fallback(ChatApiWeb.FallbackController)
 
-  plug(Guardian.Plug.EnsureAuthenticated when action in [:current_user, :update])
+  plug(Guardian.Plug.EnsureAuthenticated when action in [:current_user])
 
   def create(conn, %{"user" => user_params}, _) do
     case Auth.register(user_params) do
@@ -37,17 +37,5 @@ defmodule ChatApiWeb.UserController do
     conn
     |> put_status(:ok)
     |> render("show.json", jwt: jwt, user: user)
-  end
-
-  def update(conn, %{"user" => user_params}, user) do
-    jwt = ChatApiWeb.Guardian.Plug.current_token(conn)
-
-    case Users.update_user(user, user_params) do
-      {:ok, user} ->
-        render(conn, "show.json", jwt: jwt, user: user)
-
-      {:error, changeset} ->
-        render(conn, ChatApiWeb.ChangesetView, "error.json", changeset: changeset)
-    end
   end
 end

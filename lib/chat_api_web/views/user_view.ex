@@ -20,7 +20,7 @@ defmodule ChatApiWeb.UserView do
     %{user: render_one(user, UserView, "user.json")}
   end
 
-  def render("login.json", %{jwt: jwt, user: user}) do
+  def render("sign_in.json", %{jwt: jwt, user: user}) do
     %{user: Map.merge(render_one(user, UserView, "user.json"), %{token: jwt})}
   end
 

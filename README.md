@@ -46,10 +46,9 @@ This is a backend project, you won't be able to go to `localhost:4000` and see a
 | `/group_messages`           | ChatApiWeb.GroupMessageController   | create       | POST         |
 | `/group_messages/:id`       | ChatApiWeb.GroupMessageController   | put/patch    | PUT/PATCH    |
 | `/group_messages/:id`       | ChatApiWeb.GroupMessageController   | delete       | DELETE       |
-| `/user`                     | ChatApiWeb.UserController           | update       | PUT          |
 | `/user`                     | ChatApiWeb.UserController           | current_user | GET          |
 | `/users`                    | ChatApiWeb.UserController           | create       | POST         |
-| `/users/login`              | ChatApiWeb.SessionController        | create       | POST         |
+| `/users/sign_in`            | ChatApiWeb.SessionController        | create       | POST         |
 
 ## Tests
 

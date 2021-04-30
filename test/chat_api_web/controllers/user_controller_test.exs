@@ -55,17 +55,4 @@ defmodule ChatApiWeb.UserControllerTest do
              "updatedAt" => json["updatedAt"]
            }
   end
-
-  test "update current_user data", %{conn: conn} do
-    conn = put(secure_conn(conn), user_path(conn, :update), user: @user_update_attrs)
-    json = json_response(conn, 200)["user"]
-
-    assert json == %{
-             "id" => json["id"],
-             "email" => @user_update_attrs.email,
-             "token" => json["token"],
-             "createdAt" => json["createdAt"],
-             "updatedAt" => json["updatedAt"]
-           }
-  end
 end

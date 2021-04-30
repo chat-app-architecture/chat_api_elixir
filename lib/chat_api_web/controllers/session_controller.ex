@@ -13,7 +13,7 @@ defmodule ChatApiWeb.SessionController do
 
         conn
         |> put_status(:created)
-        |> render(ChatApiWeb.UserView, "login.json", jwt: jwt, user: user)
+        |> render(ChatApiWeb.UserView, "sign_in.json", jwt: jwt, user: user)
 
       {:error, message} ->
         conn
