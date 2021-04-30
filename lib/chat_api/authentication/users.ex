@@ -9,26 +9,6 @@ defmodule ChatApi.Authentication.Users do
   def get_user!(id), do: Repo.get!(User, id)
 
   @doc """
-  Creates a update user.
-
-  ## Examples
-
-      iex> update_user(%{field: value})
-      {:ok, %GroupMessage{}}
-
-      iex> update_user(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
-  """
-
-  def update_user(user, attrs) do
-    user
-    |> User.changeset(attrs)
-    |> ChatApi.Authentication.Auth.hash_password()
-    |> Repo.update()
-  end
-
-  @doc """
   Creates a user resource.
 
   ## Examples
