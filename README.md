@@ -24,7 +24,6 @@ To get started, run the following commands in your project folder:
 
 | Command                                       | Description                                  |
 |-----------------------------------------------|----------------------------------------------|
-| `cp config/dev.exs.example config/dev.exs`    | creates the project's configuration file     |
 | `mix deps.get`                                | installs the dependencies                    |
 | `mix ecto.create`                             | creates the database                         |
 | `mix ecto.migrate`                            | run the database migrations                  |
