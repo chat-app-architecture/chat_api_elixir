@@ -4,6 +4,7 @@ defmodule ChatApi.Chat do
   """
 
   import Ecto.Query, warn: false
+
   alias ChatApi.Repo
   alias ChatApi.Authentication.{User, UserResource}
   alias ChatApi.Chat.{Group, GroupMessage}

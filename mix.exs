@@ -71,8 +71,14 @@ defmodule ChatApi.Mixfile do
       "db.setup": ["ecto.create", "ecto.load", "run priv/repo/seeds.exs"],
       "db.reset": ["ecto.drop", "db.setup"],
       "db.migrate": ["ecto.migrate", "ecto.dump"],
-      "db.pristine": ["ecto.drop", "ecto.create", "ecto.load --dump-path priv/repo/base.sql", "ecto.migrate", "run priv/repo/seeds.exs"],
-      "test": ["ecto.create", "ecto.load --skip-if-loaded", "test"]
+      "db.pristine": [
+        "ecto.drop",
+        "ecto.create",
+        "ecto.load --dump-path priv/repo/base.sql",
+        "ecto.migrate",
+        "run priv/repo/seeds.exs"
+      ],
+      test: ["ecto.create", "ecto.load --skip-if-loaded", "test"]
     ]
   end
 

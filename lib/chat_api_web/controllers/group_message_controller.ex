@@ -15,7 +15,6 @@ defmodule ChatApiWeb.GroupMessageController do
   def create(conn, %{"group_message" => params}, user) do
     with {:ok, %GroupMessage{} = group_message} <-
            ChatApi.Chat.create_group_message(params, user.id) do
-
       create_message_resource(user, group_message)
 
       conn

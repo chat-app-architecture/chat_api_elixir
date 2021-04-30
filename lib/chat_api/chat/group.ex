@@ -4,7 +4,9 @@ defmodule ChatApi.Chat.Group do
   """
 
   use Ecto.Schema
+
   import Ecto.Changeset
+
   alias ChatApi.Authentication.User
   alias ChatApi.Chat.{Group, GroupMessage}
 
