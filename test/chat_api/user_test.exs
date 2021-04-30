@@ -11,16 +11,12 @@ defmodule ChatApi.Authentication.UserTest do
   }
 
   describe "given valid parameters" do
-    test "update_user/2 hashes the password if new one set" do
+    test "get_user/1 retrieves a user" do
       {:ok, user} = ChatApi.Authentication.Auth.register(@user_create_attrs)
 
-      new_password = "newPassword!123"
+      get_user = Users.get_user!(user.id)
 
-      Users.update_user(user, %{password: new_password})
-
-      assert ChatApi.Authentication.Auth.find_user_and_check_password(%{
-               "user" => %{"email" => @user_create_attrs.email, "password" => new_password}
-             })
+      assert get_user.id == user.id
     end
   end
 end
