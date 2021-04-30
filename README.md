@@ -2,13 +2,10 @@
 
 This codebase was created to demonstrate a fully fledged backend API with **Elixir and Phoenix** including CRUD operations, authentication, routing, pagination, and more.
 
-We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene/credo)** community style guides & best practices.
-
 - [Chat API in Phoenix](#chat-api-in-phoenix)
   - [Installation](#installation)
   - [API Endpoints](#api-endpoints)
   - [Tests](#tests)
-  - [Documentation](#documentation)
   - [Style guide](#style-guide)
   - [Licensing](#licensing)
 
@@ -56,16 +53,6 @@ To run the tests for this project, simply run in your terminal:
 ```shell
 mix test
 ```
-
-## Documentation
-
-To generate the documentation, your can run in your terminal:
-
-```shell
-mix docs
-```
-
-This will generate a `doc/` directory with a documentation in HTML. To view the documentation, open the `index.html` file in the generated directory.
 
 ## Style guide
 
